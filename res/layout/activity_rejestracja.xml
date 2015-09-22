@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NowyMotyw"
+	android:orientation="vertical"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+    tools:context="com.example.loginmenu.Login" >
+    
+    <EditText
+        android:id="@+id/wpisznazwe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/uzytkownik"
+        android:inputType="text"
+        android:textSize="10sp" />
+    
+    <EditText
+        android:id="@+id/wpiszlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:textSize="10sp" />
+    
+     <EditText
+         android:id="@+id/wpiszhaslo"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="@string/password"
+         android:inputType="textPassword"
+         android:textSize="10sp" />
+     
+     <EditText
+        android:id="@+id/wpiszemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:inputType="text"
+        android:textSize="10sp" />
+
+     <Button
+         android:id="@+id/bReg"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#FFFFFF"
+         android:text="@string/reg" />
+     
+</LinearLayout>
