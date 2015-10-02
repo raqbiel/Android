@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NowyMotyw"
+	android:orientation="vertical"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+    tools:context="com.example.loginmenu.Login" >
+    
+    <EditText
+        android:id="@+id/wpiszlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:textSize="10sp" />
+    
+     <EditText
+         android:id="@+id/wpiszhaslo"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="@string/password"
+         android:inputType="textPassword"
+         android:textSize="10sp" />
+
+     <Button
+         android:id="@+id/bLogin"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#FFFFFF"
+         android:text="@string/login"
+         android:onClick="ladujLogin" />
+
+     <Button
+         android:id="@+id/reg"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#FFFF00"
+         android:text="Rejestracja"
+         android:onClick="ladujReg" />
+     
+</LinearLayout>
