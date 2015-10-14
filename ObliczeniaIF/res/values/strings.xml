@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ObliczeniaIF</string>
+    <string name="licz">LICZ</string>
+    <string name="action_settings">Settings</string>
+    <string name="licz1"></string>
+    <string name="licz2"></string>
+
+</resources>
