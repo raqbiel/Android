@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Geometria</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pole_kwadratu">PoleKwadratuActivity</string>
+    <string name="pole_kwadratu">Pole kwadratu</string>
+    <string name="dlugosc_boku_kwadrat">Długość boku: </string>
+    <string name="oblicz">Oblicz</string>
+    <string name="pole_kwadratu_wynosi">Pole kwadratu wynosi:</string>
+    <string name="pusto">---</string>
+    <string name="pole_prostokata">Pole prostokata</string>
+    <string name="pole_prostokata_wynosi">Pole kwadratu wynosi: </string>
+    <string name="title_activity_pole_prostokata">PoleProstokata</string>
+
+</resources>

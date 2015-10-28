@@ -1,0 +1,128 @@
+<TableLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"    	
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <TableRow>
+          <ImageView
+            android:id="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+             android:src="@drawable/kwadrat"
+            />
+          
+              <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pole kwadratu"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        
+
+       />
+    </TableRow>
+    
+     <TableRow>
+          <ImageView
+            android:id="@+id/img2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+             android:src="@drawable/prostokat"
+            />
+          
+              <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pole prostokąta"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+	
+       />
+    </TableRow>
+
+     
+      <TableRow>
+          <ImageView
+            android:id="@+id/img3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+             android:src="@drawable/kolo"
+            />
+          
+              <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pole koła"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+       />
+    </TableRow>
+
+      
+       <TableRow>
+          <ImageView
+            android:id="@+id/img4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+             android:src="@drawable/romb"
+            />
+          
+              <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pole rombu"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+       />
+    </TableRow>
+    
+     <TableRow>
+          <ImageView
+            android:id="@+id/img5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+             android:src="@drawable/trojkat"
+            />
+          
+              <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pole trójkąta prostokątnego"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+       />
+    </TableRow>
+     
+      <TableRow>
+          <ImageView
+            android:id="@+id/img6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+             android:src="@drawable/trojkat2"
+            />
+          
+              <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pole trójkąta równobocznego"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+       />
+    </TableRow>
+        
+       
+</TableLayout>
+
+
