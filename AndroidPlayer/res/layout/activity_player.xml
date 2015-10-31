@@ -1,3 +1,4 @@
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,7 +28,9 @@
         android:layout_above="@+id/tableRow1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="18dp" />
+        android:layout_marginBottom="18dp"
+        android:progressBackgroundTint="#FF00FF"
+        android:thumbTint="#FF0000" />
 
     <TextView
         android:id="@+id/textView1"
@@ -54,6 +57,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/btn_play" 
+        android:background="@drawable/btnplay"
         android:onClick="play"/>
 
     <ImageButton
@@ -63,6 +67,16 @@
         android:layout_alignLeft="@+id/imageButton1"
         android:layout_alignTop="@+id/imageButton1"
         android:src="@drawable/btnplayst" 
-        android:onClick="pause"/>
+        android:onClick="pause"
+        android:background="@drawable/btnplayst"/>
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/textView2"
+        android:indeterminate="false" />
 
 </RelativeLayout>

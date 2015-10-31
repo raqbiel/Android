@@ -1,8 +1,10 @@
+
 package com.example.androidplayer;
 
 import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
 public class Player extends Activity {
@@ -28,6 +31,7 @@ public class Player extends Activity {
 	private SeekBar seekbar;
 	private TextView nazwaPiosenki, czas;
 
+	AudioManager am;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +43,42 @@ public class Player extends Activity {
         btnPlay.setClickable(true);
         btnPause.setVisibility(View.INVISIBLE);
         btnPause.setClickable(false);
-	
+        
+        //////////////////////////
+       //////Audio Control///////
+      //////////////////////////
+     am = (AudioManager)getSystemService(AUDIO_SERVICE);
+     int maxVol = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+     int Vol = am.getStreamVolume(AudioManager.STREAM_MUSIC);
+     SeekBar volume = (SeekBar)findViewById(R.id.seekBar2);   
+     volume.setMax(maxVol);
+     volume.setProgress(Vol);
+     volume.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+		
+		@Override
+		public void onStopTrackingTouch(SeekBar seekBar) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public void onStartTrackingTouch(SeekBar seekBar) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public void onProgressChanged(SeekBar seekBar, int progress, boolean arg2) {
+			am.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0);
+			
+		}
+	});
+     
+     
 		initializeViews();
 	}
 	
-	
+	//Uruchamianie Media Player/////
 	public void initializeViews(){
 		nazwaPiosenki = (TextView)findViewById(R.id.textView1);
 		mp = MediaPlayer.create(this,R.raw.wychylybymy);
