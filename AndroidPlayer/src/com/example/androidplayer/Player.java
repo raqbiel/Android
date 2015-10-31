@@ -9,16 +9,19 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Player extends Activity {
 
@@ -32,6 +35,10 @@ public class Player extends Activity {
 	private TextView nazwaPiosenki, czas;
 
 	AudioManager am;
+	
+	
+	 String path=":/res/raw/wychylybymy.mp3";
+	 String nazwa=path.substring(path.lastIndexOf("/")+1);
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +61,7 @@ public class Player extends Activity {
      volume.setMax(maxVol);
      volume.setProgress(Vol);
      volume.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-		
+   
 		@Override
 		public void onStopTrackingTouch(SeekBar seekBar) {
 			// TODO Auto-generated method stub
@@ -85,7 +92,7 @@ public class Player extends Activity {
 		czasFinal = mp.getDuration();
 		czas = (TextView)findViewById(R.id.textView2);
 		seekbar = (SeekBar)findViewById(R.id.seekBar1);
-		nazwaPiosenki.setText("Piosenka");
+		nazwaPiosenki.setText(nazwa);
 		
 		seekbar.setMax((int) czasFinal);
 		seekbar.setClickable(false);
@@ -100,7 +107,7 @@ public class Player extends Activity {
 		czasUplywajacy = mp.getCurrentPosition();
 		seekbar.setProgress((int) czasUplywajacy);
 		durationHandler.postDelayed(updateSeekBarTime, 100); 
-
+		Toast.makeText(this, nazwaPiosenki.getText().toString(), Toast.LENGTH_LONG).show();
        // btnPause.setClickable(true);
        // btnPlay.setClickable(false);
 		/* if (mp.isPlaying()) {
@@ -139,17 +146,4 @@ public class Player extends Activity {
 		getMenuInflater().inflate(R.menu.player, menu);
 		return true;
 	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
 }
