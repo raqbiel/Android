@@ -1,5 +1,11 @@
 package com.example.produkty;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,8 +16,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class ProduktyMainActivity extends Activity {
 
@@ -20,11 +29,14 @@ public class ProduktyMainActivity extends Activity {
 			"VW",
 			"Fiat",
 			"Peugeot",
+			"Mazda",
+			"KIA",
 	};
 	
+	SeekBar zmien;
 	TextView tv;
 	EditText et;
-	String klucz;
+	static String klucz;
 	Produkt produkt1 = new Produkt();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +53,45 @@ public class ProduktyMainActivity extends Activity {
 	autocomplete.setThreshold(2);
 	autocomplete.setAdapter(adapter);
 	
+	zmien = (SeekBar)findViewById(R.id.seekBar1);
+	zmien.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
+		 public void onStopTrackingTouch(SeekBar arg0) {
+             // TODO Auto-generated method stub
+
+         }
+
+         public void onStartTrackingTouch(SeekBar arg0) {
+             // TODO Auto-generated method stub
+
+         }
+
+         public void onProgressChanged(SeekBar arg0, int progress, boolean arg2) {
+        	 tv.setText(progress+"");
+             if(progress >= 10 && progress < 25){
+            	 tv.setText(produkt1.audi);
+            	 tv.setTextColor(Color.BLUE);
+         }else if(progress >= 25 && progress < 50){
+        	     tv.setText(produkt1.vw);
+            	 tv.setTextColor(Color.BLACK);
+         }else if(progress >= 50 && progress <= 75){
+        	     tv.setText(produkt1.peugeot);
+            	 tv.setTextColor(Color.GREEN);
+         }else if(progress >= 75 && progress <= 100){
+    	     tv.setText(produkt1.fiat);
+        	 tv.setTextColor(Color.GREEN);
+         }else 
+                 tv.setTextColor(Color.RED);
+         }
+     });
 	}
+	
 	public void Szukaj(View v){
 		
 		tv = (TextView)findViewById(R.id.textView1);		
 		et = (EditText)findViewById(R.id.autoCompleteTextView1);
 		klucz = et.getText().toString();	
 		tv.setShadowLayer(0, 0, 0, Color.RED);
-	if("Audi".equals(klucz) || "audi".equals(klucz)){
+		if("Audi".equals(klucz) || "audi".equals(klucz)){
 	//tv.setText(produkt1.nazwa+ "\n" +produkt1.model+ "\n" +produkt1.rok);	
 	 tv.setText(produkt1.audi);	
 	}
@@ -63,12 +106,16 @@ public class ProduktyMainActivity extends Activity {
 	}
 	}
 
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.produkty_main, menu);
 		return true;
 	}
+
+
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

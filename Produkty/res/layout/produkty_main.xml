@@ -41,4 +41,12 @@
         <requestFocus />
     </AutoCompleteTextView>
 
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="49dp" />
+
 </RelativeLayout>
