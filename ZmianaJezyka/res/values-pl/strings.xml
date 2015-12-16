@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+ 
+    <!-- Polish-->
+    <string name="app_name">LangSwitcher</string>
+ 
+    <string name="welcome">Witam!</string>
+    <string name="email">Email</string>
+    <string name="password">Hasło</string>
+    <string name="login">Login</string>
+    <string name="signup">Nie masz jeszcze konta?Załóż!</string>
+
+</resources>
