@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SQL</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="wpisz_miejsce">WPISZ MIEJSCE</string>
+    <string name="wpisz_id">WPISZ ID</string>
+    <string name="wpisz_kraj">WPISZ KRAJ</string>
+    <string name="pokaz_miejsca">POKAŻ MIEJSCA</string>
+    <string name="miejsca_zwiedzanie">MIEJSCA DO ZWIEDZENIA</string>
+    <string name="dodaj">DODAJ</string>
+    <string name="usun">USUŃ</string>
+    <string name="odswiez">ODŚWIEŻ</string>
+    <string name="title_activity_pin">PIN</string>
+
+</resources>
