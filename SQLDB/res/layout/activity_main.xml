@@ -81,7 +81,7 @@
      			android:background="#ffff2f5d"
                 android:textColor="#fff"
                 android:textSize="20sp"
-                android:onClick="wybor" 
+                android:onClick="wybor"
                 android:text="@string/usun"/>
      		     		
 </LinearLayout>
